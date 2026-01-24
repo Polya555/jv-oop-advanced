@@ -5,12 +5,13 @@ import java.util.Random;
 public class FigureSupplier {
     private static final int MIN_PROPERTY_VALUE = 1;
     private static final int MAX_PROPERTY_VALUE = 20;
+    private static final int FIGURES_COUNT = 5;
 
     private final ColorSupplier colorSupplier = new ColorSupplier();
     private final Random random = new Random();
 
     public Figure getRandomFigure() {
-        int figureType = random.nextInt(5);
+        int figureType = random.nextInt(FIGURES_COUNT);
         String color = colorSupplier.getRandomColor();
 
         double prop1 = MIN_PROPERTY_VALUE + (MAX_PROPERTY_VALUE - MIN_PROPERTY_VALUE)
